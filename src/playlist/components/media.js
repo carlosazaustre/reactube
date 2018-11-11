@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './media.css';
 
-class Media extends Component {
+class Media extends PureComponent {
   render() {
     return (
       <div className="Media">
