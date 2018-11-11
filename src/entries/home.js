@@ -4,5 +4,5 @@ import { render } from 'react-dom';
 import Home from '../pages/containers/home';
 import data from '../api.json';
 
-const app = document.getElementById('app');
-render(<Home data={data} />, app)
+const homeContainer = document.getElementById('home-container');
+render(<Home data={data} />, homeContainer)

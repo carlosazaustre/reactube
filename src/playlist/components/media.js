@@ -5,7 +5,7 @@ import './media.css';
 class Media extends PureComponent {
   render() {
     return (
-      <div className="Media">
+      <div className="Media" onClick={this.props.handleClick}>
         <div className="Media-cover">
           <img 
             src={this.props.cover}
