@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    invie: path.resolve(__dirname, 'src/index.js'),
+    reactube: path.resolve(__dirname, 'index.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
