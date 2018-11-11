@@ -1,0 +1,141 @@
+{
+  "categories": [
+  {
+    "id": 1,
+    "description": "Trending this week",
+    "title": "Trending Topic",
+    "playlist": [
+    {
+      "title": "Lenovo ThinkPad X1 Extreme Review",
+      "author": "Engadget",
+      "type": "video",
+      "cover": "./images/covers/lenovocarbon.png",
+      "src": "./videos/lenovocarbon.mp4",
+      "id": 1
+    },
+    {
+      "title": "Google Home Review",
+      "author": "The Verge",
+      "type": "video",
+      "cover": "./images/covers/googlehome.png",
+      "src": "./videos/googlehome.mp4",
+      "id": 2
+    },
+    {
+      "title": "Lenovo ThinkPad X1 Extreme Review",
+      "author": "Engadget",
+      "type": "video",
+      "cover": "./images/covers/lenovocarbon.png",
+      "src": "./videos/lenovocarbon.mp4",
+      "id": 3
+    },
+    {
+      "title": "Google Home Review",
+      "author": "The Verge",
+      "type": "video",
+      "cover": "./images/covers/googlehome.png",
+      "src": "./videos/googlehome.mp4",
+      "id": 4
+    },
+    {
+      "title": "Lenovo ThinkPad X1 Extreme Review",
+      "author": "Engadget",
+      "type": "video",
+      "cover": "./images/covers/lenovocarbon.png",
+      "src": "./videos/lenovocarbon.mp4",
+      "id": 5
+    }]
+  },
+  {
+    "id": 2,
+    "description": "Reviews",
+    "title": "Gadget unboxing and reviews",
+    "playlist": [
+    {
+      "title": "Lenovo ThinkPad X1 Extreme Review",
+      "author": "Engadget",
+      "type": "video",
+      "cover": "./images/covers/lenovocarbon.png",
+      "src": "./videos/lenovocarbon.mp4",
+      "id": 6
+    },
+    {
+      "title": "Google Home Review",
+      "author": "The Verge",
+      "type": "video",
+      "cover": "./images/covers/googlehome.png",
+      "src": "./videos/googlehome.mp4",
+      "id": 7
+    },
+    {
+      "title": "Lenovo ThinkPad X1 Extreme Review",
+      "author": "Engadget",
+      "type": "video",
+      "cover": "./images/covers/lenovocarbon.png",
+      "src": "./videos/lenovocarbon.mp4",
+      "id": 8
+    },
+    {
+      "title": "Google Home Review",
+      "author": "The Verge",
+      "type": "video",
+      "cover": "./images/covers/googlehome.png",
+      "src": "./videos/googlehome.mp4",
+      "id": 9
+    },
+    {
+      "title": "Lenovo ThinkPad X1 Extreme Review",
+      "author": "Engadget",
+      "type": "video",
+      "cover": "./images/covers/lenovocarbon.png",
+      "src": "./videos/lenovocarbon.mp4",
+      "id": 10
+    }]
+  },
+  {
+    "id": 3,
+    "description": "Tutorials",
+    "title": "Video tutorials about code programing",
+    "playlist": [
+    {
+      "title": "PWAs with Firebase",
+      "author": "Google Developers",
+      "type": "video",
+      "cover": "./images/covers/firebase.png",
+      "src": "./videos/firebase.mp4",
+      "id": 11
+    },
+    {
+      "title": "Updates on Chrome 70",
+      "author": "Chrome Developers",
+      "type": "video",
+      "cover": "./images/covers/chrome.png",
+      "src": "./videos/chrome.mp4",
+      "id": 13
+    },
+    {
+      "title": "PWAs with Firebase",
+      "author": "Google Developers",
+      "type": "video",
+      "cover": "./images/covers/firebase.png",
+      "src": "./videos/firebase.mp4",
+      "id": 14
+    },
+    {
+      "title": "Updates on Chrome 70",
+      "author": "Chrome Developers",
+      "type": "video",
+      "cover": "./images/covers/chrome.png",
+      "src": "./videos/chrome.mp4",
+      "id": 15
+    },
+    {
+      "title": "PWAs with Firebase",
+      "author": "Google Developers",
+      "type": "video",
+      "cover": "./images/covers/firebase.png",
+      "src": "./videos/firebase.mp4",
+      "id": 16
+    }
+  ]}
+]}
