@@ -15,6 +15,12 @@ class VideoPlayer extends Component {
     });
   }
 
+  componentDidMount() {
+    this.setState({
+      pause: !this.props.autoplay,
+    });
+  }
+
   render() {
     return (
       <VideoPlayerLayout>
@@ -26,7 +32,8 @@ class VideoPlayer extends Component {
           handleClick={this.togglePlay}
         />
         <Video 
-          autoplay={false}
+          autoplay={this.props.autoplay}
+          pause={this.state.pause}
           src="./videos/googlehome.mp4"
         />
       </VideoPlayerLayout>
