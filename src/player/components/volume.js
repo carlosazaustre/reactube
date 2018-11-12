@@ -21,7 +21,6 @@ function Volume(props) {
           onChange={props.handleVolumeChange}
         />
       </div>
-      
     </button>
 
   );

@@ -25,6 +25,8 @@ class VideoPlayer extends Component {
     pause: true,
     duration: 0,
     currentTime: 0,
+    currentVolume: 0,
+    lastVolume: 1,
     loading: false,
   }
 
@@ -74,7 +76,11 @@ class VideoPlayer extends Component {
   }
 
   handleToggleVolume = event => {
-    this.video.volume = 0;
+    this.setState({
+      lastVolume: this.state.currentVolume,
+      currentVolume: this.state.currentVolume === 0 ? this.state.lastVolume : 0
+    });
+    this.video.volume = this.state.lastVolume;
   }
 
   HandleFullScreenClick = event =>{
