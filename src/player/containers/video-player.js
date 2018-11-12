@@ -7,6 +7,8 @@ import Timer from '../components/timer';
 import Controls from '../components/video-player-controls';
 import ProgressBar from '../components/progress-bar';
 import Spinner from '../components/spinner';
+import Volume from '../components/volume';
+import FullScreen from '../components/full-screen';
 
 function leftPad(number) {
   const pad = '00';
@@ -67,9 +69,31 @@ class VideoPlayer extends Component {
     });
   }
 
+  handleVolumeChange = event => {
+    this.video.volume = event.target.value
+  }
+
+  handleToggleVolume = event => {
+    this.video.volume = 0;
+  }
+
+  HandleFullScreenClick = event =>{
+    if (!document.webkitIsFullScreen) {
+      this.player.webkitRequestFullscreen();
+    } else {
+      document.webkitExitFullscreen();
+    }
+  }
+
+  setRef = element => {
+    this.player = element;
+  }
+
   render() {
     return (
-      <VideoPlayerLayout>
+      <VideoPlayerLayout
+        setRef={this.setRef}
+      >
         <Title 
           title="Video Name"
         />
@@ -86,6 +110,13 @@ class VideoPlayer extends Component {
             duration={this.state.duration}
             value={this.state.currentTime}
             handleProgressChange={this.handleProgressChange}
+          />
+          <Volume 
+            handleVolumeChange={this.handleVolumeChange}
+            handleToggleVolume={this.handleToggleVolume}
+          />
+          <FullScreen 
+            HandleFullScreenClick={this.HandleFullScreenClick}
           />
         </Controls>
         <Spinner 
