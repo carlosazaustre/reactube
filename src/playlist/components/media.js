@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 import './media.css';
 
 class Media extends PureComponent {
+  handleClick = event => {
+    this.props.openModal(this.props);
+  }
+
   render() {
     return (
-      <div className="Media" onClick={this.props.handleClick}>
+      <div className="Media" onClick={this.handleClick}>
         <div className="Media-cover">
           <img 
             src={this.props.cover}
