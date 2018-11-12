@@ -5,6 +5,8 @@ import Title from '../components/title';
 import PlayPause from '../components/play-pause';
 import Timer from '../components/timer';
 import Controls from '../components/video-player-controls';
+import ProgressBar from '../components/progress-bar';
+import Spinner from '../components/spinner';
 
 function leftPad(number) {
   const pad = '00';
@@ -20,7 +22,8 @@ class VideoPlayer extends Component {
   state = {
     pause: true,
     duration: 0,
-    currentTime: '0:00',
+    currentTime: 0,
+    loading: false,
   }
 
   togglePlay = () => {
@@ -38,13 +41,29 @@ class VideoPlayer extends Component {
   handleLoadedMetadata = event => {
     this.video = event.target;
     this.setState({
-      duration: formattedTime(this.video.duration)
+      duration: this.video.duration
     })
   }
 
   handleTimeUpdate = event => {
     this.setState({
-      currentTime: formattedTime(this.video.currentTime),
+      currentTime: this.video.currentTime,
+    });
+  }
+
+  handleProgressChange = event => {
+    this.video.currentTime = event.target.value;
+  }
+
+  handleSeeking = event => {
+    this.setState({
+      loading: true,
+    });
+  }
+
+  handleSeeked = event => {
+    this.setState({
+      loading: false,
     });
   }
 
@@ -60,15 +79,25 @@ class VideoPlayer extends Component {
             handleClick={this.togglePlay}
           />
           <Timer
-            currentTime={this.state.currentTime}
+            currentTime={formattedTime(this.state.currentTime)}
+            duration={formattedTime(this.state.duration)}
+          />
+          <ProgressBar 
             duration={this.state.duration}
+            value={this.state.currentTime}
+            handleProgressChange={this.handleProgressChange}
           />
         </Controls>
+        <Spinner 
+          active={this.state.loading}
+        />
         <Video 
           autoplay={this.props.autoplay}
           pause={this.state.pause}
           handleLoadedMetadata={this.handleLoadedMetadata}
           handleTimeUpdate={this.handleTimeUpdate}
+          handleSeeking={this.handleSeeking}
+          handleSeeked={this.handleSeeked}
           src="./videos/googlehome.mp4"
         />
       </VideoPlayerLayout>
